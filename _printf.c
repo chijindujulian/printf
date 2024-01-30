@@ -32,6 +32,12 @@ int _printf(char *format, ...)
 
 				counter += _print_string(str);
 			}
+			else if (*format == 'd' || *format == 'i')
+			{
+				int i = va_arg(args, int);
+
+				counter += _print_int(i);
+			}
 			else if (*format == '%')
 			{
 				_putchar('%');
