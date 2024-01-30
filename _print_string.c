@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
- * _print_string - prints a string
+ * _print_string - print a string
  * @str: string to print
  *
- * Return: Count on succes, -1 on NULL
-*/
+ * Return: Always 0
+ */
+
 int _print_string(char *str)
 {
-	int counter = 0;
+	int counter;
 
-    if (str == NULL)
-    {
-        return (-1);
-    }
+	if (str == NULL)
+	{
+		return (-1);
+	}
 
-	while (*str != '\0')
+	for (counter = 0; *str != '\0'; counter++)
 	{
 		_putchar(*str);
-		counter++;
 		str++;
 	}
 
