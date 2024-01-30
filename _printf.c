@@ -11,10 +11,10 @@
 int _printf(char *format, ...)
 {
     int counter = 0;
-
     va_list args;
 
     va_start(args, format);
+
     while (*format != '\0')
     {
         if (*format == '%')
@@ -28,17 +28,22 @@ int _printf(char *format, ...)
                 counter++;
             }
             else if (*format == 'd' || *format == 'i')
-			{
-				int i = va_arg(args, int);
+            {
+                int i = va_arg(args, int);
 
-				counter += _print_int(i);
-			}
-			else if (*format == 's')
-			{
-				char *str = va_arg(args, char *);
+                counter += _print_int(i);
+            }
+            else if (*format == 's')
+            {
+                char *str = va_arg(args, char *);
 
-				counter += _print_string(str);
-			}
+                counter += _print_string(str);
+            }
+            else if (*format == '%')
+            {
+                _putchar('%');
+                counter++;
+            }
         }
         else
         {
@@ -50,4 +55,3 @@ int _printf(char *format, ...)
     va_end(args);
     return (counter);
 }
-

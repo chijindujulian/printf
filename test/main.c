@@ -13,6 +13,7 @@ int main(void)
     printf("A string %s\n", "hello");
     printf("An integer %d\n", 12);
     printf("A negative integer %d\n\n", -12);
+    printf("A double percent %%\n\n");
 
     printf("A line\n\n");
 
@@ -21,6 +22,7 @@ int main(void)
     _printf("A string %s\n", "hello");
     _printf("An integer %d\n", 12);
     _printf("A negative integer %d\n", -12);
+    _printf("A double percent %%\n\n");
 
     return (0);
 }
