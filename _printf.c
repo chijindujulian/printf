@@ -8,7 +8,7 @@
  * Return: 0
  */
 
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
 	int counter = 0;
 	va_list args;
